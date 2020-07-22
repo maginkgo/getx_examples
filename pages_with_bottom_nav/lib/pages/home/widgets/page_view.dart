@@ -8,7 +8,7 @@ class PagesView extends GetWidget<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Obx(() => IndexedStack(
-          index: controller.currentIndex.value,
+          index: controller.currentIndex,
           children: [for (var tabItem in TabNavItems.items) tabItem.page],
         ));
   }

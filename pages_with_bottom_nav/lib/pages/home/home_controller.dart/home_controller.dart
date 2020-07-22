@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  final currentIndex = 0.obs;
-
-  void setIndex(int index) => currentIndex.value = index;
+  final _currentIndex = 0.obs;
+  int get currentIndex => this._currentIndex.value;
+  set currentIndex(int value) => this._currentIndex.value = value;
 }

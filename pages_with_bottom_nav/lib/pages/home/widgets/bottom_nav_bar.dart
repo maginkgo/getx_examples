@@ -10,8 +10,8 @@ class BottomNavBar extends GetWidget<HomeController> {
     return Obx(() {
       return BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        currentIndex: controller.currentIndex.value,
-        onTap: controller.setIndex,
+        currentIndex: controller.currentIndex,
+        onTap: (index) => controller.currentIndex = index,
         items: TabNavItems.items
             .map((tab) => BottomNavigationBarItem(
                   title: tab.title,
