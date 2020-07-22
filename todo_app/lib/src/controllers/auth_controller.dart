@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
 class AuthController extends GetxController {
-  FirebaseAuth _auth = FirebaseAuth.instance;
-  Rx<FirebaseUser> _firebaseUser = Rx<FirebaseUser>();
+  final _auth = FirebaseAuth.instance;
+  final _firebaseUser = Rx<FirebaseUser>();
 
   String get user => _firebaseUser.value?.email;
 
@@ -14,7 +14,8 @@ class AuthController extends GetxController {
 
   void createUser(String email, String password) async {
     try {
-      await _auth.createUserWithEmailAndPassword(email: email.trim(), password: password);
+      await _auth.createUserWithEmailAndPassword(
+          email: email.trim(), password: password);
       Get.back();
     } catch (e) {
       Get.snackbar(
@@ -27,7 +28,8 @@ class AuthController extends GetxController {
 
   void login(String email, String password) async {
     try {
-      await _auth.signInWithEmailAndPassword(email: email.trim(), password: password);
+      await _auth.signInWithEmailAndPassword(
+          email: email.trim(), password: password);
     } catch (e) {
       Get.snackbar(
         "Error signing in",

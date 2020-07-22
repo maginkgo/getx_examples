@@ -32,9 +32,9 @@
 /build/
 /android
 /ios
-/linux
+/macos
+/linux 
 /web
-/macos 
 
 # Web related
 lib/generated_plugin_registrant.dart
