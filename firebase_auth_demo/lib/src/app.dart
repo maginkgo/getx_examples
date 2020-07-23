@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'controllers/auth_controller.dart';
+import 'controllers/bindings/auth_binding.dart';
 import 'pages/home/home_page.dart';
 import 'pages/login/login_page.dart';
 
@@ -14,7 +14,6 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       getPages: AppPages.pages,
-      // home: HomePage(),
     );
   }
 }
@@ -23,10 +22,8 @@ abstract class AppPages {
   static final pages = [
     GetPage(
       name: Routes.INITIAL,
-      page: () => GetBuilder<AuthController>(
-        init: AuthController(),
-        builder: (c) => c.user == null ? LoginPage() : HomePage(),
-      ),
+      page: () => HomePage(),
+      binding: AuthBinding(),
     ),
     GetPage(name: Routes.HOME, page: () => HomePage()),
     GetPage(name: Routes.LOGIN, page: () => LoginPage()),
