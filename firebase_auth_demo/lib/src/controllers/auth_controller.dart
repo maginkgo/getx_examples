@@ -10,3 +10,5 @@ class AuthController extends GetxController {
     print(user);
   }
 }
+
+//
