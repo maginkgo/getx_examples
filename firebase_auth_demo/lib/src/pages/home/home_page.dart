@@ -9,9 +9,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-/* child: GetX<MyController>(
-  init: MyController(),
-  builder: (_){
-    return Container();
-}), */
