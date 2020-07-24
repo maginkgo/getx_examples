@@ -8,7 +8,7 @@ class OnePage extends GetWidget<OneController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('OnePage')),
+      appBar: AppBar(title: Text('OnePage'), automaticallyImplyLeading: false),
       body: Container(
         child: Center(
           child: Obx(() => Text('${controller.counter}', style: Get.textTheme.headline1)),

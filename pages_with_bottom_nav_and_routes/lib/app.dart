@@ -20,6 +20,7 @@ class App extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       getPages: AppPages.pages,
+      defaultTransition: Transition.zoom,
       initialRoute: Routes.INITIAL,
     );
   }

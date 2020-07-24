@@ -8,7 +8,7 @@ class ThreePage extends GetWidget<ThreeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('ThreePage')),
+      appBar: AppBar(title: Text('ThreePage'), automaticallyImplyLeading: false),
       body: Container(
         child: Center(
           child: Obx(() => Text('${controller.counter}', style: Get.textTheme.headline1)),

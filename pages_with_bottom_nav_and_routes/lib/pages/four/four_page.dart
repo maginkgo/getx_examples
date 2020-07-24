@@ -8,7 +8,7 @@ class FourPage extends GetWidget<FourController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('FourPage')),
+      appBar: AppBar(title: Text('FourPage'), automaticallyImplyLeading: false),
       body: Container(
         child: Center(
           child: Obx(() => Text('${controller.counter}', style: Get.textTheme.headline1)),

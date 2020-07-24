@@ -8,7 +8,7 @@ class TwoPage extends GetWidget<TwoController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('TwoPage')),
+      appBar: AppBar(title: Text('TwoPage'), automaticallyImplyLeading: false),
       body: Container(
         child: Center(
           child: Obx(() {
