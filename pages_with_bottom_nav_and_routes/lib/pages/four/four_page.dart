@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pages_with_bottom_nav/pages/widgets/bottom_nav_bar/bottom_nav_bar.dart';
 
 import 'four_controller.dart';
 
@@ -18,7 +17,6 @@ class FourPage extends GetWidget<FourController> {
         child: Icon(Icons.add),
         onPressed: controller.increment,
       ),
-      bottomNavigationBar: BottomNavBar(),
     );
   }
 }

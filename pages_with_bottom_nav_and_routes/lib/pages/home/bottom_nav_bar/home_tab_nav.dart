@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pages_with_bottom_nav/app.dart';
+
+import '../../home/home_page.dart';
 
 enum HomeScreenTab { one, two, three, four }
 

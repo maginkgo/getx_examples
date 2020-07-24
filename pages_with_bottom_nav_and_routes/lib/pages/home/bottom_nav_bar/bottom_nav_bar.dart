@@ -5,13 +5,13 @@ import 'controller/bottom_nav_bar_controller.dart';
 import 'home_tab_nav.dart';
 
 class BottomNavBar extends GetWidget<BottomNavBarController> {
-  final _key = ValueKey('bottom_nav_bar');
   @override
   Widget build(BuildContext context) {
     return Obx(() {
       return BottomNavigationBar(
-        key: _key,
-        type: BottomNavigationBarType.fixed,
+        // type: BottomNavigationBarType.fixed,
+        selectedItemColor: Get.theme.colorScheme.secondary,
+        unselectedItemColor: Colors.white,
         currentIndex: controller.currentIndex,
         onTap: controller.changeIndex,
         items: HomeScreenTab.values

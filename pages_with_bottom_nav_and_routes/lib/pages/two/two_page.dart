@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pages_with_bottom_nav/pages/widgets/bottom_nav_bar/bottom_nav_bar.dart';
 
 import 'two_controller.dart';
 
@@ -20,7 +19,6 @@ class TwoPage extends GetWidget<TwoController> {
         child: Icon(Icons.add),
         onPressed: controller.increment,
       ),
-      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
