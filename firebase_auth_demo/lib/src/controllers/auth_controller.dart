@@ -1,8 +1,9 @@
-import 'package:firebase_auth_demo/src/models/user_model.dart';
 import 'package:get/get.dart';
 
+import '../repositories/auth_repository.dart';
+
 class AuthController extends GetxController {
-  UserModel user;
+  final _authRepository = AuthRepository();
 
   final _isLogged = false.obs;
   bool get isLogged => this._isLogged.value;
@@ -16,16 +17,30 @@ class AuthController extends GetxController {
     }
   }
 
-  Future<void> login() async {
-    await Future.delayed(Duration(seconds: 1));
-    // user = UserModel(id: '123', name: 'Marcos');
+  void login() async {
+    await _authRepository.login();
+    getUser();
+  }
+
+  void logout() async {
+    await _authRepository.logout();
+    getUser();
+  }
+
+  void getUser() {
+    var user = _authRepository.user;
     isLogged = user != null;
   }
 
   @override
   void onInit() {
-    login();
-    ever(_isLogged, authNavegation);
+    getUser();
     super.onInit();
+  }
+
+  @override
+  void onStart() {
+    ever(_isLogged, authNavegation);
+    super.onStart();
   }
 }

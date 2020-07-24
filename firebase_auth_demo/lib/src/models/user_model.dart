@@ -1,6 +1,5 @@
 class UserModel {
-  final String id;
-  final String name;
+  final String uid;
 
-  UserModel({this.id, this.name});
+  UserModel({this.uid});
 }

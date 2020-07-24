@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../controllers/auth_controller.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -8,7 +11,9 @@ class LoginPage extends StatelessWidget {
       body: Container(),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.account_circle),
-        onPressed: () {},
+        onPressed: () {
+          Get.find<AuthController>().login();
+        },
       ),
     );
   }
