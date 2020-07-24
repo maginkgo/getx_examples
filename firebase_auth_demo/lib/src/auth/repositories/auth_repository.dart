@@ -1,6 +1,6 @@
-import 'package:firebase_auth_demo/src/models/user_model.dart';
 import 'package:get/get.dart';
 
+import '../models/user_model.dart';
 import '../providers/auth_provider.dart';
 
 class AuthRepository {

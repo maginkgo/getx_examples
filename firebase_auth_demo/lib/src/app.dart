@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'controllers/bindings/auth_binding.dart';
+import 'auth/controllers/bindings/auth_binding.dart';
 import 'pages/home/home_page.dart';
 import 'pages/login/login_page.dart';
 import 'pages/splash/splash_screen.dart';

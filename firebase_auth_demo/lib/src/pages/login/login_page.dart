@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../controllers/auth_controller.dart';
+import '../../auth/controllers/auth_controller.dart';
 
 class LoginPage extends StatelessWidget {
   @override
