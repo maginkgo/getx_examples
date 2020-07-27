@@ -10,6 +10,8 @@ class LoginController extends GetxController {
   /// Observables
   final authState = AuthState.idle.obs;
 
+  final isLoading = false.obs;
+
   // Eventos
   void changeState(state) {
     print(state);

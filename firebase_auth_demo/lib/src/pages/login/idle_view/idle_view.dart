@@ -3,8 +3,7 @@ import 'package:get/get.dart';
 
 import '../controllers/idle_view_controller.dart';
 
-class IdleView extends StatelessWidget {
-  final c = Get.put(IdleViewController());
+class IdleView extends GetWidget<IdleViewController> {
   @override
   Widget build(BuildContext context) {
     return Column(children: [UserField(), GoButton()]);

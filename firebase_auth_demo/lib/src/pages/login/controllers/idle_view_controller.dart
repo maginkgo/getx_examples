@@ -63,6 +63,7 @@ class IdleViewController extends GetxController {
   void onInit() {
     firstField.addListener(() => firstText = firstField.text);
     Get.find<LoginController>().authState.bindStream(_authState.stream);
+    Get.find<LoginController>().isLoading.bindStream(_isLoading.stream);
     super.onInit();
   }
 
