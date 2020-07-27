@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+// import 'package:get/get.dart';
 
-import '../../auth/controllers/auth_controller.dart';
+// import '../../auth/controllers/auth_controller.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.exit_to_app),
             onPressed: () {
-              Get.find<AuthController>().logout();
+              // Get.find<AuthController>().logout();
             },
           )
         ],

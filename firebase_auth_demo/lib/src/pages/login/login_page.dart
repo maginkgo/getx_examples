@@ -1,20 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/state_manager.dart';
 
-import '../../auth/controllers/auth_controller.dart';
+import 'controllers/login_controller.dart';
+import 'idle_view/idle_view.dart';
+import 'widgets/linear_loading.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends GetWidget<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('LoginPage')),
-      body: Container(),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.account_circle),
-        onPressed: () {
-          Get.find<AuthController>().login();
-        },
-      ),
+      appBar: AppBar(title: Text('LoginPage'), bottom: LinearLoading()),
+      body: controller.authState.view,
     );
+  }
+}
+
+extension AuthViews on AuthState {
+  Widget get view {
+    Widget view;
+    switch (this) {
+      case AuthState.idle:
+        view = IdleView();
+        break;
+      case AuthState.loginWithEmail:
+        view = Placeholder();
+        break;
+      case AuthState.registerWithEmail:
+        view = Placeholder();
+        break;
+    }
+    return view;
   }
 }

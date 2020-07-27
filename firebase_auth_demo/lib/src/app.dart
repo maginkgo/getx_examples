@@ -14,6 +14,7 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       initialBinding: AuthBinding(),
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
       initialRoute: '/',
       getPages: AppPages.pages,
     );
@@ -23,8 +24,8 @@ class App extends StatelessWidget {
 abstract class AppPages {
   static final pages = [
     GetPage(name: Routes.INITIAL, page: () => SplashScreen()),
-    GetPage(name: Routes.HOME, page: () => HomePage()),
-    GetPage(name: Routes.LOGIN, page: () => LoginPage()),
+    GetPage(name: Routes.HOME, page: () => HomePage(), transition: Transition.fadeIn),
+    GetPage(name: Routes.LOGIN, page: () => LoginPage(), transition: Transition.topLevel),
   ];
 }
 
