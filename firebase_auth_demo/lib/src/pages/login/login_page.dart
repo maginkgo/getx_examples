@@ -11,7 +11,7 @@ class LoginPage extends GetWidget<LoginController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('LoginPage'), bottom: LinearLoading()),
-      body: controller.authState.view,
+      body: Obx(() => controller.authState.value.view),
     );
   }
 }
