@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../controllers/idle_view_controller.dart';
+import 'sign_out_view_controller.dart';
 
-class IdleView extends GetWidget<IdleViewController> {
+class SignOutView extends GetWidget<SignOutViewController> {
   @override
   Widget build(BuildContext context) {
-    return Column(children: [UserField(), GoButton()]);
+    return Scaffold(
+      appBar: AppBar(title: Text('Login')),
+      body: Column(children: [UserField(), GoButton()]),
+    );
   }
 }
 
-class GoButton extends GetWidget<IdleViewController> {
+class GoButton extends GetWidget<SignOutViewController> {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
@@ -31,7 +34,7 @@ class GoButton extends GetWidget<IdleViewController> {
   }
 }
 
-class UserField extends GetWidget<IdleViewController> {
+class UserField extends GetWidget<SignOutViewController> {
   @override
   Widget build(BuildContext context) {
     return Padding(

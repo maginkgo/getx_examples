@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import 'auth/controllers/bindings/auth_binding.dart';
 import 'pages/home/home_page.dart';
-import 'pages/login/controllers/bindings/login_binding.dart';
+import 'pages/login/controllers/login_binding.dart';
 import 'pages/login/login_page.dart';
 import 'pages/splash/splash_screen.dart';
 
@@ -25,10 +25,7 @@ class App extends StatelessWidget {
 abstract class AppPages {
   static final pages = [
     GetPage(name: Routes.INITIAL, page: () => SplashScreen()),
-    GetPage(
-        name: Routes.HOME,
-        page: () => HomePage(),
-        transition: Transition.fadeIn),
+    GetPage(name: Routes.HOME, page: () => HomePage(), transition: Transition.fadeIn),
     GetPage(
       name: Routes.LOGIN,
       page: () => LoginPage(),
