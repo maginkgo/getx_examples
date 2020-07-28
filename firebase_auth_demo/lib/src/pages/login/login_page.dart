@@ -25,11 +25,11 @@ class LoginPage extends GetWidget<LoginController> {
             binding = SignOutBinding();
             break;
           case AuthState.EMAIL_SIGN_IN:
-            view = EmailSignInView();
+            view = EmailSignInView(settings.arguments);
             binding = EmailSignInBinding();
             break;
           case AuthState.EMAIL_SIGN_UP:
-            view = EmailSignUpView();
+            view = EmailSignUpView(settings.arguments);
             binding = EmailSignUpBinding();
         }
         return GetPageRoute(
